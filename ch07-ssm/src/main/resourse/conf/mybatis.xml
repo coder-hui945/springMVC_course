@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--<settings>
+    &lt;!&ndash;设置日志&ndash;&gt;
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>-->
+    <!--设置别名-->
+    <typeAliases>
+        <!--name:实体类所在包名（不是实体类的包名也行）-->
+        <package name="com.wuminghui.domain"/>
+    </typeAliases>
+    <!--sql mapper：sql映射文件的位置 -->
+    <mappers>
+        <!--使用package标签的要求：1.mapper文件名称和dao接口名必须完全一样
+                                   2.mapper文件和dao接口必须在同一目录-->
+        <package name="com.wuminghui.dao"></package>
+    </mappers>
+</configuration>

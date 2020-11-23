@@ -1,0 +1,1 @@
+ch05-url-parttern:研究中央调度器的url-partern设置为“/”  斜杠表示静态资源和未映射的请求都交给这个default处理

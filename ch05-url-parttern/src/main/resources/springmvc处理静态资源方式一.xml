@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:vc="http://www.springframework.org/schema/mvc" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        https://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!--声明主键扫描器-->
+    <context:component-scan base-package="com.wuminghui.controller"></context:component-scan>
+    <!--声明springmvc框架中的视图解析器，帮助开发人员设置视图文件的路径-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!--前缀，视图文件的路径-->
+        <property name="prefix" value="/WEB-INF/view/"></property>
+        <!--后缀，视图文件的扩展名--> 
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+    <!--加入注解驱动:annotation-driven有多个，要选mvc的那一个！！！-->
+    <!--<mvc:default-servlet-handler>和@RequestMapping注解有冲突，需要加入<vc:annotation-driven>解决冲突-->
+    <vc:annotation-driven></vc:annotation-driven>
+    <!--第一种配置静态资源的方式：
+    需要在springmvc配置文件中加入<mvc:default-servlet-handler>和<vc:annotation-driven>注解驱动
+    原理是：加入标签后，框架会创建控制器对象DefaultServletHttpRequestHandler（类似我们自己创建的MyController）
+    DefaultServletHttpRequestHandler这个对象可以把接收到的请求转发给tomcat的default这个servlet处理，包含任何静态动态资源，
+    此时添加注解驱动，表示包含注解的资源由框架处理。
+    -->
+    <mvc:default-servlet-handler></mvc:default-servlet-handler>
+</beans>

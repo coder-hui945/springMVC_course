@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ch04-return" />
+        <module name="ch07-ssm" />
+        <module name="ch12-intercetptor-permission" />
+        <module name="ch08-forward-redirect" />
+        <module name="ch10-intercetptor" />
+        <module name="ch11-intercetptor2" />
+        <module name="ch09-exception-handler" />
+        <module name="ch02-requestmapping" />
+        <module name="ch04-return (1)" />
+        <module name="ch06-path" />
+        <module name="ch01-hello-springMVC" />
+        <module name="ch05-url-parttern" />
+        <module name="ch02-requestmapping (1)" />
+        <module name="ch03-receiveparam (1)" />
+        <module name="ch03-receiveparam" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ch01-hello-springMVC" target="1.8" />
+      <module name="ch01-hello-springMVC (1)" target="1.8" />
+      <module name="ch02-requestmapping" target="1.8" />
+      <module name="ch02-requestmapping (1)" target="1.8" />
+      <module name="ch03-receiveparam" target="1.8" />
+      <module name="ch03-receiveparam (1)" target="1.8" />
+      <module name="ch04-return" target="1.8" />
+      <module name="ch04-return (1)" target="1.8" />
+      <module name="ch05-url-parttern" target="1.8" />
+      <module name="ch06-path" target="1.8" />
+      <module name="ch07-ssm" target="1.8" />
+      <module name="ch08-forward-redirect" target="1.8" />
+      <module name="ch09-exception-handler" target="1.8" />
+      <module name="ch10-intercetptor" target="1.8" />
+      <module name="ch11-intercetptor2" target="1.8" />
+      <module name="ch12-intercetptor-permission" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!--声明组件扫描器-->
+    <context:component-scan base-package="com.wuminghui.controller"></context:component-scan>
+    <!--声明springmvc框架中的视图解析器，帮助开发人员设置视图文件的路径-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!--前缀，视图文件的路径-->
+        <property name="prefix" value="/WEB-INF/view/"></property>
+        <!--后缀，视图文件的扩展名-->
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+
+    <!--声明拦截器：拦截器可以有0或多个，先声明的先执行，后声明的后执行
+            在框架中保存多个拦截器是ArrayList，按照先后顺序放入到ArrayList并按顺序执行拦截。
+    -->
+   <mvc:interceptors>
+       <!--声明第一个拦截器-->
+        <mvc:interceptor>
+            <!--指明要拦截的地址-->
+            <mvc:mapping path="/**"/>
+            <!--声明拦截器对象,来处理拦截-->
+            <bean class="com.wuminghui.handler.MyInterceptor"></bean>
+        </mvc:interceptor>
+
+   </mvc:interceptors>
+
+        
+    
+
+</beans>
