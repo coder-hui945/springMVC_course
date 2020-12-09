@@ -1,4 +1,4 @@
-ch10-exception-handler:拦截器
+ch10-interceptor:拦截器
 
 创建拦截器步骤：
 1.新建maven web项目

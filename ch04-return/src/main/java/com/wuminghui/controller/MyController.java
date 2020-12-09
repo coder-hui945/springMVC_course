@@ -99,7 +99,6 @@ public class MyController {
         //调用service，获取请求结果数据，Student对象表示结果数据
         Student student = new Student("吴明辉", 25);
         return student;//会被框架转为json格式
-
     }
 /*处理器方法返回List<student>*/
     @RequestMapping(value = "/doStudentJsonObjectArray.do")

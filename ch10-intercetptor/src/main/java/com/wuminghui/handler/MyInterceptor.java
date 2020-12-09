@@ -55,7 +55,7 @@ public class MyInterceptor implements HandlerInterceptor {
         ModelAndView mv:处理器方法的返回值
 
         特点：
-         1.在处理器方法之后执行的（MyController.doSome()）
+         1.在处理器方法（MyController.doSome()）之后执行的
          2.能够获取到处理器方法的返回值ModelAndView,可以修改ModelAndView中的
          数据和视图，可以影响到最后的执行结果。
          3.主要是对原来的执行结果做二次修正，

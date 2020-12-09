@@ -1,12 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="war" name="ch05-url-parttern:war">
     <output-path>$PROJECT_DIR$/ch05-url-parttern/target</output-path>
-    <properties id="maven-jee-properties">
-      <options>
-        <module>ch05-url-parttern</module>
-        <packaging>war</packaging>
-      </options>
-    </properties>
     <root id="archive" name="ch05-url-parttern-1.0-SNAPSHOT.war">
       <element id="artifact" artifact-name="ch05-url-parttern:war exploded" />
     </root>

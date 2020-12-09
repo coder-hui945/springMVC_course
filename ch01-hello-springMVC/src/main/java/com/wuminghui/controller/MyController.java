@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 * 叫做后端控制器（back controller）
 * */
 @Controller
+//@RequestMapping(value = "hhh")
 public class MyController {
     /*处理用户提交的请求，springvc中是使用方法来处理的。
     * 方法是自定义的，可以有多种返回值，多种参数，方法名称自定义*/

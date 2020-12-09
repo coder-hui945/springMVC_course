@@ -56,8 +56,8 @@ public class MyController {
 *
 * */
 
-    @RequestMapping(value = "/receiveparam.do")
-    public ModelAndView receivepara(@RequestParam("myname") String name,@RequestParam("myage") Integer age){
+    @RequestMapping(value = "/receiveparam.do" )
+    public ModelAndView receivepara(@RequestParam(value = "myname",required = true) String name,@RequestParam("myage") Integer age){
         //可以在方法中直接使用name age
         ModelAndView mv = new ModelAndView();
         mv.addObject("name",name);

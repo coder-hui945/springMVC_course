@@ -26,10 +26,6 @@
             <!--声明拦截器对象,来处理拦截-->
             <bean class="com.wuminghui.handler.MyInterceptor"></bean>
         </mvc:interceptor>
-
    </mvc:interceptors>
-
-        
-    
 
 </beans>
